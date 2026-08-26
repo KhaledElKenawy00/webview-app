@@ -139,6 +139,8 @@ class _WebViewHomeState extends State<WebViewHome> {
       },
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.green,
+          foregroundColor: Colors.white,
           title: const Text('المركز الإعلامي لمحافظة الشرقية'),
           centerTitle: true,
         ),
