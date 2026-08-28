@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-const String kSiteUrl = 'https://service-sharqia.ai.studio';
+const String kSiteUrl = 'https://service-496680589958.europe-west1.run.app/';
 // Domain used to decide which links stay inside the app vs. open externally.
 const String kSiteHost = 'service-sharqia.ai.studio';
 
@@ -149,7 +149,9 @@ class _WebViewHomeState extends State<WebViewHome> {
             children: [
               if (!_hasError) WebViewWidget(controller: _controller),
               if (_isLoading && !_hasError)
-                LinearProgressIndicator(value: _progress == 0 ? null : _progress),
+                LinearProgressIndicator(
+                  value: _progress == 0 ? null : _progress,
+                ),
               if (_hasError)
                 Center(
                   child: Padding(
@@ -157,7 +159,11 @@ class _WebViewHomeState extends State<WebViewHome> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        const Icon(Icons.wifi_off, size: 56, color: Colors.grey),
+                        const Icon(
+                          Icons.wifi_off,
+                          size: 56,
+                          color: Colors.grey,
+                        ),
                         const SizedBox(height: 16),
                         const Text(
                           'تعذّر تحميل الصفحة، تأكد من الاتصال بالإنترنت',
